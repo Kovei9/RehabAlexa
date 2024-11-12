@@ -1,0 +1,180 @@
+{
+  "type": "APL",
+  "version": "1.3",
+  "theme": "dark",
+  "import": [
+    {
+      "name": "alexa-layouts",
+      "version": "1.1.0"
+    }
+  ],
+  "resources": [
+    {
+      "strings": {
+        "layoutDirection": "row",
+        "justifySetting": "center"
+      }
+    },
+    {
+      "when": "${@viewportProfile \u003d\u003d @hubRoundSmall}",
+      "strings": {
+        "layoutDirection": "column",
+        "justifySetting": "center"
+      }
+    }
+  ],
+  "layouts": {
+    "TextCircleWithBackground": {
+      "parameters": [
+        {
+          "name": "text",
+          "type": "string",
+          "description": "Text to display in the circle."
+        },
+        {
+          "name": "backgroundColor",
+          "type": "color",
+          "description": "Fill color for the circle."
+        }
+      ],
+      "items": [
+        {
+          "type": "Frame",
+          "width": "20vw",
+          "height": "20vw",
+          "backgroundColor": "${backgroundColor}",
+          "borderRadius": "@shapeCircle",
+          "items": [
+            {
+              "type": "Text",
+              "text": "${text}",
+              "textAlign": "center",
+              "width": "100%",
+              "height": "100%",
+              "textAlignVertical": "center"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mainTemplate": {
+    "items": [
+      {
+        "type": "Container",
+        "width": "100vw",
+        "height": "100vh",
+        "alignItems": "start",
+        "items": [
+          {
+            "type": "Container",
+            "width": "100vw",
+            "height": "20vh",
+            "items": [
+              {
+                "type": "AlexaHeader",
+                "headerTitle": "Intro to Alexa Conversations",
+                "headerSubtitle": "WelcomeResponseVisualPrompt - pick your favorite color"
+              }
+            ]
+          },
+          {
+            "type": "Container",
+            "width": "100vw",
+            "height": "60vh",
+            "alignItems": "center",
+            "direction": "@layoutDirection",
+            "justifyContent": "@justifySetting",
+            "items": [
+              {
+                "type": "TouchWrapper",
+                "item": {
+                  "type": "TextCircleWithBackground",
+                  "text": "Blue",
+                  "backgroundColor": "@colorBlue800"
+                },
+                "onPress": [
+                  {
+                    "type": "SendEvent",
+                    "arguments": [
+                      "SetFavoriteColor",
+                      "Blue"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TouchWrapper",
+                "item": {
+                  "type": "TextCircleWithBackground",
+                  "text": "Green",
+                  "backgroundColor": "@colorGreen800"
+                },
+                "onPress": [
+                  {
+                    "type": "SendEvent",
+                    "arguments": [
+                      "SetFavoriteColor",
+                      "Green"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TouchWrapper",
+                "item": {
+                  "type": "TextCircleWithBackground",
+                  "text": "Yellow",
+                  "backgroundColor": "@colorYellow800"
+                },
+                "onPress": [
+                  {
+                    "type": "SendEvent",
+                    "arguments": [
+                      "SetFavoriteColor",
+                      "Yellow"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TouchWrapper",
+                "item": {
+                  "type": "TextCircleWithBackground",
+                  "text": "Orange",
+                  "backgroundColor": "@colorOrange800"
+                },
+                "onPress": [
+                  {
+                    "type": "SendEvent",
+                    "arguments": [
+                      "SetFavoriteColor",
+                      "Orange"
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "TouchWrapper",
+                "item": {
+                  "type": "TextCircleWithBackground",
+                  "text": "Red",
+                  "backgroundColor": "@colorRed800"
+                },
+                "onPress": [
+                  {
+                    "type": "SendEvent",
+                    "arguments": [
+                      "SetFavoriteColor",
+                      "Red"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
