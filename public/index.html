@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rehab Center</title>
+    <title>Quitting Journey Journal</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Basic styling for the layout */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,130 +15,65 @@
         header, footer {
             background-color: #333;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
         }
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
+        header h1 {
+            margin: 0;
         }
         .container {
             width: 90%;
             margin: auto;
-            overflow: hidden;
             padding: 20px 0;
         }
-        .hero {
-            background: url('rehab-center.jpg') no-repeat center center/cover;
-            height: 400px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3em;
-        }
-        section {
-            padding: 20px 0;
-            text-align: center;
-        }
-        .programs, .testimonials {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .program, .testimonial {
+        .journal-entry {
             background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 250px;
-            text-align: left;
+        }
+        .journal-entry h3 {
+            color: #333;
+        }
+        .placeholder-text {
+            color: #666;
+            text-align: center;
+            padding: 50px 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Rehab Center</h1>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#programs">Programs</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact">Contact Us</a>
-            </nav>
-        </div>
+        <h1>Quitting Journey Journal</h1>
     </header>
 
-    <div id="home" class="hero">
+    <section id="journal-entries">
         <div class="container">
-            <h1>Healing Together, Step by Step</h1>
-            <p>Find the support you need to rebuild your life.</p>
-        </div>
-    </div>
-
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>At our Rehab Center, we are dedicated to providing compassionate and personalized care for individuals seeking recovery. Our programs are designed to support mental, physical, and emotional healing in a safe and welcoming environment.</p>
-        </div>
-    </section>
-
-    <section id="programs">
-        <div class="container">
-            <h2>Our Programs</h2>
-            <div class="programs">
-                <div class="program">
-                    <h3>Inpatient Rehab</h3>
-                    <p>Our intensive, structured inpatient program is designed for those needing a stable environment to begin their recovery journey.</p>
-                </div>
-                <div class="program">
-                    <h3>Outpatient Therapy</h3>
-                    <p>Flexible treatment plans for individuals who prefer to continue their daily lives while receiving support.</p>
-                </div>
-                <div class="program">
-                    <h3>Family Counseling</h3>
-                    <p>We offer family counseling sessions to help loved ones understand and support the recovery process.</p>
-                </div>
+            <h2>Client Journal Logs</h2>
+            
+            <!-- Placeholder for Alexa logs connected to database -->
+            <div class="placeholder-text">
+                <p>No journal entries yet. Entries logged via Alexa will appear here.</p>
             </div>
-        </div>
-    </section>
 
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <p>"The care and support I received here changed my life. I am forever grateful for this place."</p>
-                    <p><strong>- Jordan S.</strong></p>
-                </div>
-                <div class="testimonial">
-                    <p>"Thanks to the staff, I was able to reconnect with myself and my family. I couldn't have done it alone."</p>
-                    <p><strong>- Taylor R.</strong></p>
-                </div>
-                <div class="testimonial">
-                    <p>"The programs and team here provided the tools I needed to overcome my struggles."</p>
-                    <p><strong>- Casey W.</strong></p>
-                </div>
+            <!-- Example of a journal entry (for demonstration) -->
+            <div class="journal-entry">
+                <h3>Journal Entry - November 14, 2024</h3>
+                <p>Today, I felt a bit of a craving, but I remembered to focus on my breathing and talk it through with my support buddy. Feeling stronger each day.</p>
+                <small>Logged by Alexa</small>
             </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>If you or a loved one is in need of help, don't hesitate to reach out to us.</p>
-            <p>Email: info@rehabcenter.com | Phone: (555) 123-4567</p>
+            
+            <div class="journal-entry">
+                <h3>Journal Entry - November 13, 2024</h3>
+                <p>Had a tough day but managed to stay on track. Reached out to the support group, and it helped a lot!</p>
+                <small>Logged by Alexa</small>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Rehab Center. All Rights Reserved.</p>
+        <p>&copy; 2024 Quitting Journey Support. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
