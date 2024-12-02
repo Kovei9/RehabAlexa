@@ -160,6 +160,6 @@ const skill = Alexa.SkillBuilders.custom()
     const adapter = new ExpressAdapter(skill, false, false);
     const app = express();
     // app.get('/', (request, response) => { response.end('Homepage'); });
-    app.use('/', express.static('public'));
+    app.use(express.static(__dirname + '/public'));
     app.post('/', adapter.getRequestHandlers());
     app.listen(3006);
