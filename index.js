@@ -162,4 +162,5 @@ const skill = Alexa.SkillBuilders.custom()
     // app.get('/', (request, response) => { response.end('Homepage'); });
     app.use(express.static(__dirname + '/public'));
     app.post('/', adapter.getRequestHandlers());
+    exports.app = app;
     app.listen(3006);
