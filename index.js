@@ -209,5 +209,5 @@ exports.handler = Alexa.SkillBuilders.custom()
     app.use(express.static(__dirname + '/public'));
     app.post('/', adapter.getRequestHandlers());
     exports.app = app;
-    app.listen(3006);
+    // app.listen(3006);
 
