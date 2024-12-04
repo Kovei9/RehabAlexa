@@ -186,7 +186,7 @@ const ErrorHandler = {
 };
 
 // Skill Builder: The entry point for the Alexa Skill, where all handlers are defined in sequence.
-exports.handler = Alexa.SkillBuilders.custom()
+const skill = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         HelloWorldIntentHandler,
@@ -205,9 +205,8 @@ exports.handler = Alexa.SkillBuilders.custom()
 
     const adapter = new ExpressAdapter(skill, false, false);
     const app = express();
-    // app.get('/', (request, response) => { response.end('Homepage'); });
     app.use(express.static(__dirname + '/public'));
     app.post('/', adapter.getRequestHandlers());
     exports.app = app;
     // app.listen(3006);
-
+// app.get('/', (request, response) => { response.end('Homepage'); });
